@@ -31,7 +31,7 @@ public class GatewayRouter {
                 .uri("http://localhost:8091")
                   .predicate(applyOrder()))
             .route(p -> p
-                .path("/gateway")
+                .path("/v1/gateway")
                 .filters(f -> f.addRequestHeader("header_name", "header_value")
                     .rewritePath("/gateway", "/v1/deposit"))
                 .uri("http://localhost:8082")
