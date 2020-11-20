@@ -32,7 +32,7 @@ public class GatewayRouter {
                   .predicate(applyOrder()))
             .route(p -> p
                 .path("/gateway")
-                .filters(f -> f.addRequestHeader("consumer_id", "2496554")
+                .filters(f -> f.addRequestHeader("header_name", "header_value")
                     .rewritePath("/gateway", "/v1/deposit"))
                 .uri("http://localhost:8082")
                 .predicate(applyDeposit()))
